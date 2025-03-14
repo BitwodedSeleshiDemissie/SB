@@ -39,6 +39,7 @@ public class MoviesController {
      */
     // TODO -- ensure that 'service' is autowired with the appropriate
     // @Bean factory method.
+    @Autowired
     private MoviesService service;
 
     /**
@@ -58,6 +59,10 @@ public class MoviesController {
     /**
      * @return A {@link List} of all movies
      */
+    @GetMapping("/"+GET_ALL_MOVIES)
+    public List<Movie> getAllMovies() {
+        return service.getMovies();
+    }
     // TODO -- Create an endpoint with an annotation that maps HTTP
     // GET requests onto a handler method for "all-movies"
     // (GET_ALL_MOVIES) that takes no parameters and forwards to the
@@ -71,6 +76,10 @@ public class MoviesController {
      * @return A {@link List} of movie titles containing the query
      *         represented as {@link Movie} objects
      */
+    @GetMapping("/{query}")
+    public List<Movie> getMovies(@PathVariable String query) {
+        return service.search(query);
+    }
     // TODO -- Create an endpoint with an annotation that maps HTTP
     // GET requests onto a handler method for "search" (GET_SEARCH)
     // that uses a @PathVariable parameter and forwards to the
@@ -80,10 +89,16 @@ public class MoviesController {
      * Search for movie titles in the database containing the given
      * {@link String} queries
      *
-     * @param queries The {@link List} of search queries
+     *
      * @return A {@link List} of movie titles containing the queries
      *         represented as {@link Movie} objects
      */
+    @GetMapping("/"+GET_SEARCHES)
+    public List<Movie> getSearches(@RequestParam List<String> queries) {
+        return service.search(queries);
+
+    }
+
     // TODO -- Create an endpoint with an annotation that maps HTTP
     // GET requests onto a handler method for "searches"
     // (GET_SEARCHES) that uses a @RequestParam parameter and forwards

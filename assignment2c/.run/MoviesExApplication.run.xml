@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="MoviesExApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-    <module name="recommender-server.movies-ex.main" />
+    <module name="assignment2c.movies-ex.main" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="edu.vandy.recommender.moviesex.server.MoviesApplication" />
     <option name="VM_PARAMETERS" value="--enable-preview --add-modules jdk.incubator.concurrent" />
     <extension name="coverage">

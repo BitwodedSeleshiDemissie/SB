@@ -20,6 +20,7 @@ import static edu.vandy.recommender.movies.Constants.MOVIES_BASE_URL;
 @Configuration
 @PropertySource("classpath:application.yml")
 public class Components {
+
     /**
      * Loads the {@code dataset} and returns a {@link Map} of {@link
      * String} and {@link List<Double>} objects.
@@ -28,14 +29,9 @@ public class Components {
      *                data
      * @return A {@link Map} of {@link String} and {@link List<Double>} objects
      */
-    // TODO -- Add the appropriate annotation to make this factory
-    // method a "Bean".
-    public Map<String, List<Double>> movieMap
-    // The @Value annotation injects values into fields in
-    // Spring-managed beans.
-    (@Value("${app.dataset}") final String dataset) {
-        return MovieDatasetReader
-            .loadMovieData(dataset);
+    @Bean
+    public Map<String, List<Double>> movieMap(@Value("${app.dataset}") final String dataset) {
+        return MovieDatasetReader.loadMovieData(dataset);
     }
 
     /**
@@ -46,36 +42,30 @@ public class Components {
      *                data
      * @return A {@link List} of {@link Movie} objects
      */
-    // TODO -- Add the appropriate annotation to make this factory
-    // method a "Bean".
-    public List<Movie> movieList
-        // The @Value annotation injects values into fields in
-        // Spring-managed beans.
-        (@Value("${app.dataset}") final String dataset) {
+    @Bean
+    public List<Movie> movieList(@Value("${app.dataset}") final String dataset) {
         // Use the MovieDatasetReader to create a Map that associates
         // the movie title with the cosine vector for each movie and
         // then convert this into a List of Movie objects and return
-        // this List.
+        Map<String, List<Double>> movieData = MovieDatasetReader.loadMovieData(dataset);
 
-        // TODO -- You fill in here, replacing 'return null' with the
-        // proper code.
-
-        return null;
+        // Convert the Map to a List of Movie objects
+        return movieData.entrySet().stream()
+                .map(entry -> new Movie(entry.getKey(), entry.getValue()))
+                .toList();
     }
 
     /**
      * @return A new {@link RestTemplate} that knows how to connect to
      * the 'movies' microservice.
      */
-    // TODO -- Add the appropriate annotation to make this factory
-    // method a "Bean".
+    @Bean
     public RestTemplate getMoviesRestTemplate() {
         RestTemplate restTemplate = new RestTemplate();
 
         restTemplate
-            // Set the base URL for the RestTemplate.
-            .setUriTemplateHandler
-            (new DefaultUriBuilderFactory(MOVIES_BASE_URL));
+                // Set the base URL for the RestTemplate.
+                .setUriTemplateHandler(new DefaultUriBuilderFactory(MOVIES_BASE_URL));
 
         // Return restTemplate.
         return restTemplate;

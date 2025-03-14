@@ -4,9 +4,8 @@ import edu.vandy.recommender.movies.model.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.List;
-import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * This class defines implementation methods that are called by the
@@ -25,17 +24,15 @@ public class MoviesService {
      * This auto-wired field connects the {@link MoviesService} to the
      * {@link List} of {@link Movie} objects.
      */
-    // TODO -- ensure that mMovies is autowired with the appropriate
-    // @Bean factory method.
+    @Autowired
     List<Movie> mMovies;
 
     /**
      * @return A {@link List} of all the movies
      */
     public List<Movie> getMovies() {
-        // TODO -- you fill in here, replacing 'return null' with
-        // the proper code.
-        return null;
+        // Return the list of all movies.
+        return mMovies;
     }
 
     /**
@@ -47,12 +44,10 @@ public class MoviesService {
      *         query
      */
     public List<Movie> search(String query) {
-        // Locate all movies whose 'id' matches the 'query' and return
-        // them as a List of Movie objects.
-
-        // TODO -- you fill in here, replacing 'return null' with
-        // the proper code.
-        return null;
+        // Filter movies whose 'id' (title) contains the query string
+        return mMovies.stream()
+                .filter(movie -> movie.id().toLowerCase().contains(query.toLowerCase()))
+                .collect(Collectors.toList());
     }
 
     /**
@@ -65,11 +60,10 @@ public class MoviesService {
      *         queries
      */
     public List<Movie> search(List<String> queries) {
-        // Locate all movies whose 'id' matches the List of 'queries'
-        // and return them as a List of Movie objects.
-
-        // TODO -- you fill in here, replacing 'return null' with
-        // the proper code.
-        return null;
-   }
+        // Filter movies whose 'id' (title) contains any of the provided queries
+        return mMovies.stream()
+                .filter(movie -> queries.stream()
+                        .anyMatch(query -> movie.id().toLowerCase().contains(query.toLowerCase())))
+                .collect(Collectors.toList());
+    }
 }

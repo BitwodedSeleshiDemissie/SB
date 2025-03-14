@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-    <module name="edu.vandy.recommender.assignment2a.eureka.main" />
+    <module name="assignment2c.eureka.main" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="edu.vandy.recommender.eureka.EurekaApplication" />
     <method v="2">
       <option name="Make" enabled="true" />

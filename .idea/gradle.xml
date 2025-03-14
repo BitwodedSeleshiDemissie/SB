@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/assignment1a" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/assignment1a" />
+            <option value="$PROJECT_DIR$/assignment1a/client" />
+            <option value="$PROJECT_DIR$/assignment1a/database" />
+            <option value="$PROJECT_DIR$/assignment1a/eureka" />
+            <option value="$PROJECT_DIR$/assignment1a/gateway" />
+            <option value="$PROJECT_DIR$/assignment1a/microservices" />
+            <option value="$PROJECT_DIR$/assignment1a/movies" />
+            <option value="$PROJECT_DIR$/assignment1a/timer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/assignment1b" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/assignment1b" />
+            <option value="$PROJECT_DIR$/assignment1b/client" />
+            <option value="$PROJECT_DIR$/assignment1b/database" />
+            <option value="$PROJECT_DIR$/assignment1b/eureka" />
+            <option value="$PROJECT_DIR$/assignment1b/gateway" />
+            <option value="$PROJECT_DIR$/assignment1b/microservices" />
+            <option value="$PROJECT_DIR$/assignment1b/movies" />
+            <option value="$PROJECT_DIR$/assignment1b/timer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/assignment1c" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/assignment1c" />
+            <option value="$PROJECT_DIR$/assignment1c/client" />
+            <option value="$PROJECT_DIR$/assignment1c/database" />
+            <option value="$PROJECT_DIR$/assignment1c/eureka" />
+            <option value="$PROJECT_DIR$/assignment1c/gateway" />
+            <option value="$PROJECT_DIR$/assignment1c/microservices" />
+            <option value="$PROJECT_DIR$/assignment1c/movies" />
+            <option value="$PROJECT_DIR$/assignment1c/movies-ex" />
+            <option value="$PROJECT_DIR$/assignment1c/timer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/assignment2a" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/assignment2a" />
+            <option value="$PROJECT_DIR$/assignment2a/client" />
+            <option value="$PROJECT_DIR$/assignment2a/database" />
+            <option value="$PROJECT_DIR$/assignment2a/database-ex" />
+            <option value="$PROJECT_DIR$/assignment2a/eureka" />
+            <option value="$PROJECT_DIR$/assignment2a/gateway" />
+            <option value="$PROJECT_DIR$/assignment2a/microservices" />
+            <option value="$PROJECT_DIR$/assignment2a/movies" />
+            <option value="$PROJECT_DIR$/assignment2a/movies-ex" />
+            <option value="$PROJECT_DIR$/assignment2a/timer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/assignment2b" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/assignment2b" />
+            <option value="$PROJECT_DIR$/assignment2b/client" />
+            <option value="$PROJECT_DIR$/assignment2b/common" />
+            <option value="$PROJECT_DIR$/assignment2b/database" />
+            <option value="$PROJECT_DIR$/assignment2b/eureka" />
+            <option value="$PROJECT_DIR$/assignment2b/gateway" />
+            <option value="$PROJECT_DIR$/assignment2b/movies-ex" />
+            <option value="$PROJECT_DIR$/assignment2b/testing" />
+            <option value="$PROJECT_DIR$/assignment2b/timer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/assignment2c" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/assignment2c" />
+            <option value="$PROJECT_DIR$/assignment2c/client" />
+            <option value="$PROJECT_DIR$/assignment2c/common" />
+            <option value="$PROJECT_DIR$/assignment2c/database" />
+            <option value="$PROJECT_DIR$/assignment2c/database-ex" />
+            <option value="$PROJECT_DIR$/assignment2c/eureka" />
+            <option value="$PROJECT_DIR$/assignment2c/gateway" />
+            <option value="$PROJECT_DIR$/assignment2c/movies-ex" />
+            <option value="$PROJECT_DIR$/assignment2c/testing" />
+            <option value="$PROJECT_DIR$/assignment2c/timer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/assignment3" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/assignment3" />
+            <option value="$PROJECT_DIR$/assignment3/client" />
+            <option value="$PROJECT_DIR$/assignment3/common" />
+            <option value="$PROJECT_DIR$/assignment3/database" />
+            <option value="$PROJECT_DIR$/assignment3/database-ex" />
+            <option value="$PROJECT_DIR$/assignment3/eureka" />
+            <option value="$PROJECT_DIR$/assignment3/gateway" />
+            <option value="$PROJECT_DIR$/assignment3/movies" />
+            <option value="$PROJECT_DIR$/assignment3/movies-ex" />
+            <option value="$PROJECT_DIR$/assignment3/recommenders" />
+            <option value="$PROJECT_DIR$/assignment3/testing" />
+            <option value="$PROJECT_DIR$/assignment3/timer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
